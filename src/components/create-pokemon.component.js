@@ -106,7 +106,7 @@ export default class CreatePokemon extends Component {
       <div>
         <h3>Create New Pokemon</h3>
         <form onSubmit={this.onSubmit}>
-          <div className="form-group">
+          <div className="create-form">
             <label>Name: </label>
             <input type="text"
               required
