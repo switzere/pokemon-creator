@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: #FFF;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #000000;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+
+  position: relative;
+}
+
+.headerNav {
+  float: left;
+}
+
+.headerUl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.headerNavli {
+  float: left;
+  /*display: inline-block;*/
+  margin-left: 3px;
+  padding-top: 25px;
+
+  position: relative;
+  width: 5%;
+}
+
+.headerNavLink {
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  z-index: 100;
+  background-color: #666;
+
+  text-align: center;
+}
+
+.headerNavLink:hover {
+  color: #FFF;
+}
+
+.headerNavLink::before {
+  content: '';
+  display: block;
+  height: 25px;
+  background-color: #ab1f1f;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  z-index: 1;
+
+  /*transition: all ease-in-out 250ms;*/
+}
+
+.headerNavLink:hover::before {
+  height: 100%;
+}
+
+
+
+.create-form {
+  color: #FFF;
+}

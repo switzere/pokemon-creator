@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #222;
+  background-image: url("img/body_bg.png");
+  //background-color: #424242;
 }
 
 code {
@@ -20,61 +21,164 @@ code {
 }
 
 header {
-  background: #55d6aa;
+  background: #FFFFFF;
+  position: fixed;
+  width: 100%;
+  left: 0;
 }
 
 header::after {
   content: '';
   display: table;
   clear: both;
-}
-
-.headerNav {
-  float: right;
-}
-
-.headerUl {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.headerNavli {
-  /*float left*/
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 25px;
 
   position: relative;
 }
 
-.headerNavLink {
-  color: #444;
+.headerNav {
+  float: none;
+  width: 100%;
+  margin: 0 auto;
+  //text-align: center;
+
+}
+
+.headerUl {
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.headerUl li{
+  float: left;
+  margin-left: 0.1%;
+  margin-right: 0.1%;
+  height:55px;
+  width:24.8%;
+  outline: 2px solid #000000;
+
+  position: relative;
+
+
+  //padding-top: 25px;
+  //padding-bottom:25px;
+}
+
+.headerUl li a {
+  color: #FFF;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
+  z-index: 100;
+  background-color: #333;
+
+  display:block;
+  height:100%;
+  width:100%;
+
+  text-align: center;
+}
+
+.headerUl li a:hover {
+  color: #FFF;
+  visibility:visible;
+}
+
+.headerUl li a::before {
+  content: '';
+  display: block;
+  height: 25px;
+  //background-color: #ab1f1f;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  z-index: 1;
+}
+
+.headerUl li a:hover::before {
+  height: 100%;
+}
+
+.headerNavLinkGray::before {
+  background-color: #999999;
+}
+
+.headerNavLinkRed::before {
+  background-color: #d95757;
+}
+
+.headerNavLinkBlue::before {
+  background-color: #575bd9;
+}
+
+.headerNavLinkGreen::before {
+  background-color: #57d985;
+}
+
+
+
+.headerNavLinkGray:hover::before {
+  content: 'Pokedex';
+}
+
+.headerNavLinkRed:hover::before {
+  content: 'Create Pokemon';
+}
+
+.headerNavLinkBlue:hover::before {
+  content: 'About';
+}
+
+.headerNavLinkGreen:hover::before {
+  content: 'My Website';
+}
+
+
+
+/*
+.headerNavLink {
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  z-index: 100;
+  background-color: #666;
+
+  display:block;
+  height:100%;
+  width:100%;
+
+  text-align: center;
 }
 
 .headerNavLink:hover {
-  color: #000;
+  color: #FFF;
 }
 
 .headerNavLink::before {
   content: '';
   display: block;
-  height: 5px;
-  background-color: #444;
+  height: 25px;
+  background-color: #ab1f1f;
 
   position: absolute;
-  top: 0;
-  width: 0%;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  z-index: 1;
 
-  transition: all ease-in-out 250ms;
+  //transition: all ease-in-out 250ms;
 }
 
 .headerNavLink:hover::before {
-  width: 100%;
-}
+  height: 100%;
+}*/
+
+
 
 .create-form {
   color: #FFF;

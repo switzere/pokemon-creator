@@ -11,11 +11,17 @@ export default class Navbar extends Component {
         <div className="container">
           <nav className="headerNav">
             <ul className="headerUl">
-              <li className="headerNavli">
-              <Link to="/" className="headerNavLink">Pokedex</Link>
+              <li>
+                <Link to="/" className="headerNavLinkGray">Pokedex</Link>
               </li>
-              <li className="headerNavli">
-              <Link to="/create" className="headerNavLink">Create Pokemon</Link>
+              <li>
+                <Link to="/create" className="headerNavLinkRed">Create Pokemon</Link>
+              </li>
+              <li>
+                <Link to="/" className="headerNavLinkBlue">About</Link>
+              </li>
+              <li>
+                <a href="https://evanswitzer.ca" target="_blank" className="headerNavLinkGreen">My Website</a>
               </li>
             </ul>
           </nav>
