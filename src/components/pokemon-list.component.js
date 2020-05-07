@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import pikachu from '../img/pikachu.jpg';
 
-const Pokemon = props => (
+
+/*const Pokemon = props => (
   <tr>
     <td>{props.pokemon.name}</td>
     <td>{props.pokemon.num}</td>
@@ -15,7 +17,18 @@ const Pokemon = props => (
       <Link to={"/edit/"+props.pokemon._id}>edit</Link> | <a href="#" onClick={() => { props.deletePokemon(props.pokemon._id) }}>delete</a>
     </td>
   </tr>
+)*/
+
+const Pokemon = props => (
+  <div className="pokemonContainer">
+    <img className="pokemonImg" src={pikachu} alt="pikachu"/>
+    <p>#{props.pokemon.num}</p>
+    <p>{props.pokemon.name}</p>
+  </div>
 )
+
+
+
 
 export default class PokemonList extends Component {
   constructor(props) {
@@ -50,12 +63,29 @@ export default class PokemonList extends Component {
     })
   }
 
+
+
+    render() {
+      return (
+        <div className="whiteContainer">
+          <div className="listContainer">
+            <h3 className="title">Pokedex</h3>
+            <ul>
+                { this.pokemonList() }
+            </ul>
+          </div>
+        </div>
+      )
+    }
+  }
+
+/*
   render() {
     return (
-      <div>
-        <h3>Logged Pokemon</h3>
+      <div className="tableContainer">
+        <h3 className="title">Pokedex</h3>
         <table className="table">
-          <thead className="thead-light">
+          <thead className="thead-dark">
             <tr>
               <th>Name</th>
               <th>Num</th>
@@ -72,4 +102,4 @@ export default class PokemonList extends Component {
       </div>
     )
   }
-}
+}*/
